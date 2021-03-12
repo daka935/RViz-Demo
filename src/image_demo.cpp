@@ -20,7 +20,10 @@ public:
         Node("axes_node") {
             
             // Load the image file from disk.
+            /* compile error: couldn't find samples
             std::string image_path = cv::samples::findFile(path);
+            */
+            std::string image_path = path;
             cv::Mat img = cv::imread(image_path, cv::IMREAD_COLOR); 
             
             // Show it and wait for button press.
